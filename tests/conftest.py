@@ -1,4 +1,5 @@
 import os
+import shutil
 import zipfile
 import pytest
 
@@ -23,3 +24,4 @@ def create_archive(scope="session", autouse=True):
             add_file = os.path.join('C:\\Users\\Admin\\Desktop\\getting-started-python-master\\qa_quru_homowork_7\\tmp', file)
             zf.write(add_file, os.path.basename(add_file))
     yield
+    shutil.rmtree('C:\\Users\\Admin\\Desktop\\getting-started-python-master\\qa_quru_homowork_7\\resourse\\file.zip')
