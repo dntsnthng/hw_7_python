@@ -10,7 +10,6 @@ def test_check_pdf_file():
 
         assert 'sobaka@mail.ru' in reader.pages[0].extract_text()
 
-
 def test_check_xlsx_file():
     with ZipFile(ZIP_FILE) as zf:
         with zf.open('file.xlsx') as file:
